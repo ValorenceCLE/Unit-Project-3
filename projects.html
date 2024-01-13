@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Landon Bell</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">Landon Bell</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mt-4">
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    </nav>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="text-center mb-4">Landon Bell</h1>
+        <p class="lead text-center">(801)-673-5054 | landontbell@hotmail.com | <a href="www.linkedin.com/in/landon-bell-02004a24a">LinkedIn</a></p>
+        </div>
+    </div>
+  </div>
+  <div class="container mt-4" style="border-top: 5px solid #212529;">
+</div>
+<br>
+<h1 class="container color: bg-dark;"><center>Raspberry Pi Project</center></h1>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12 mt-4">
+      <div class="card border border-dark">
+        <div class="card-header bg-dark text-white">
+          <h3 class="card-title">Background Information</h3>
+        </div>
+        <div class="card-body text-black" style="font-size: 12pt;">
+            <p class="card-text">
+                There is an interesting piece of equipment called a <a href="https://www.controlbyweb.com/x410/">Control By Web.</a>This device acts as a smart relay that allows a user to remotely toggle a relay, in addition to relay management it offers real time temperature and voltage monitoring.
+                <br>
+                Currently I use the Control By Web's relays to control a router and IP camera, this allows for remote troubleshooting 
+                <br>
+                I wanted to recreate this device using a Raspberry Pi and an array of sensors to achieve the same level of enviormental monitoring that the Control By Web offers.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12 mt-4">
+        <div class="card border border-dark">
+          <div class="card-header bg-dark text-white">
+            <h3 class="card-title">Equipment</h3>
+          </div>
+          <div class="card-body text-black" style="font-size: 12pt;">
+              <p class="card-text">
+                  Picking the right Raspberry Pi model and array of sensors was critical to the success of this project. I set a budget for this project of $300 to provide an aspect of realism and an extra level of difficulty.
+                  <br>
+                  The first thing to do was setting up the Pi with all of the sensors. I decided to use a Raspberry Pi CM4 because it allowed me to use more unique breakout boards.
+
+                  In addition to the CM4, I purchased a breakout board for the CM4 that came with a built in battery backup. Being able to provide a battery backup to the system allows for an additional layer of reliablity.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12 mt-4">
+        <div class="card border border-dark">
+          <div class="card-header bg-dark text-white">
+            <h3 class="card-title">Configuring the Raspberry Pi</h3>
+          </div>
+          <div class="card-body text-black" style="font-size: 12pt;">
+              <p class="card-text">
+                  The next step after setting up the Pi with the breakout board was to set up all of the external sensors and write code to retrive the data.
+                  <br>
+                  There were four main sensors temperature, voltage, current and a motion monitor. The Temperature sensor and motion monitor connected easily to the general GPIO on the Raspberry PI.
+
+                  After connecting those two sensors to the GPIO board I utilized Adafruits Python libraries to write a script that collects the sensor data.
+
+                  <br>
+
+                  The voltage and current sensors utilize I2C for communication with the PI, after identifying the I2C address for each of the sensors I was able to again utilize Adafruit libraries to gather sensor data. 
+
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12 mt-4">
+        <div class="card border border-dark">
+          <div class="card-header bg-dark text-white">
+            <h3 class="card-title">Setting up a NAS</h3>
+          </div>
+          <div class="card-body text-black" style="font-size: 12pt;">
+              <p class="card-text">
+                The IP camera that I use can maxes out at 1TB of storaage on an SD card. While 1TB is a lot and more than enough storage more most use cases, I wanted to add more.
+                  <br>
+                  I wanted to set up the Raspberry Pi to work as a NAS for the camera to record onto. With the storage being on the Pi it allows for greater access to the recordings.
+                  <br>
+                  A Pi on its own does not have much storage and shouldn't be used as a NAS. However, by utilizing an M.2 chip that breaks out into six SATA ports I was able to add 48TB of NAS configured using RAID 6.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12 mt-4">
+        <div class="card border border-dark">
+          <div class="card-header bg-dark text-white">
+            <h3 class="card-title">Building a Website</h3>
+          </div>
+          <div class="card-body text-black" style="font-size: 12pt;">
+              <p class="card-text">
+                  After successfully connecting to and retriving sensor data, the next step is to build a website that allows users to monitor those sensors as well as manipulate the GPIO of the PI to simulate a remote relay.
+                  <br>
+                  Utilizing a Django framework I constructed a website that allows users to log into the system and manipulate relays and view sensors remotely.
+                  After building the website I wanted to implement logic rules for the sensors. I connected a fan to the system to prevent overheating, when the temperature sensor reads over 80 degrees it will automatically turn on and cool off the system.
+                  <br>
+                  The next step was to set up the router and IP camera to the GPIO which allows users to remotley turn on and off those devices remotely.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12 mt-4">
+        <div class="card border border-dark">
+          <div class="card-header bg-dark text-white">
+            <h3 class="card-title">Logs</h3>
+          </div>
+          <div class="card-body text-black" style="font-size: 12pt;">
+              <p class="card-text">
+                After building the base functionality of the website I wanted to create the ability to gather syslogs from the router and IP camera to be analyzed.
+
+                  <br>
+                    The goal of this was to build a system that can analyze syslogs to gain insights into common issues. By understanding what the most common errors are I was able to improve the reliability of the system by identifying and fixing the most common errors.
+                  <br>
+                    The Django framework comes with a built in database, I utilized the database to store the syslogs. By putting the logs in the database I was able to safely store the data in one centeralized location. 
+                    Once the logs were in the database I set up an S3 bucket and wrote a script to send the logs from the Pi to the AWS S3 bucket.
+                    By putting these logs in an AWS enviorment I was able to build a dashboard to be used internally for identifying syslog errors. 
+                
+                  <br>
+                    The goal behind using AWS was to enable scalability. Since the Pi is only able to develope and analyze syslogs on the connected router and IP camera, by building an AWS dashboard for the logs it allows for internal analysis on several Raspberry Pi systems.
+                    This enabled me to gather insights on dozens of routers and IP cameras spread accross dozens of Raspberry Pi systems. This lead to more in depth insights into the most common issues faced by the routers and cameras.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12 mt-4">
+        <div class="card border border-dark">
+          <div class="card-header bg-dark text-white">
+            <h3 class="card-title">Summary</h3>
+          </div>
+          <div class="card-body text-black" style="font-size: 12pt;">
+              <p class="card-text">
+                After finishing the project not only have I have built a system that not only matches the functionality of the Control By Web but significantly improves upon the concept by adding several new features. Not only was I able to improve upon the Control By Web but I was able to make a system that is cheaper and more powerfull.
+                  <br>
+                  While the project is done and I have far surpassed my initial goals there is still room for improvements and I am continuing to imrpove upon the project whenever possible.
+                  <br>
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <div class="container mt-4" style="border-top: 5px solid #212529;">
+</div>
+<br>
+
+
+</body>
